@@ -22,12 +22,11 @@ export const FixedLayout: CustomLayout = (page) => {
 
 const Container = styled("div", {
   display: "grid",
-  gridTemplateRows: "auto 1fr auto",
+  gap: "2rem",
+  paddingY: "4rem",
+  paddingX: "1rem",
   marginX: "auto",
   maxWidth: "768px",
-  minHeight: "100vh",
 });
 
-const Main = styled("main", {
-  backgroundColor: "$blue7",
-});
+const Main = styled("main", {});

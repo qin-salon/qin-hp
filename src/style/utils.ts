@@ -13,6 +13,22 @@ export const utils: IConfig<TMedias, TTheme, { [x: string]: any }, "", CSSProper
       };
     };
   },
+  paddingX: (_config) => {
+    return (value) => {
+      return {
+        paddingLeft: value,
+        paddingRight: value,
+      };
+    };
+  },
+  paddingY: (_config) => {
+    return (value) => {
+      return {
+        paddingTop: value,
+        paddingBottom: value,
+      };
+    };
+  },
 
   // A property for applying width/height together
   size: (_config) => {

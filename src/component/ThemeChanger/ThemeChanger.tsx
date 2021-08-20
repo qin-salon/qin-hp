@@ -1,3 +1,4 @@
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { styled } from "src/style";
@@ -6,7 +7,7 @@ import { styled } from "src/style";
  * @package
  */
 export const ThemeChanger = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -15,34 +16,39 @@ export const ThemeChanger = () => {
 
   if (!isMounted) return null;
 
-  const handleClickLight = () => {
-    setTheme("light");
-  };
-  const handleClickSystem = () => {
-    setTheme("system");
-  };
-  const handleClickDark = () => {
+  if (resolvedTheme === "dark") {
+    const handleToLight = () => {
+      setTheme("light");
+    };
+
+    return (
+      <Button onClick={handleToLight}>
+        <SunIcon width={32} height={32} />
+      </Button>
+    );
+  }
+
+  const handleToDark = () => {
     setTheme("dark");
   };
 
   return (
-    <div>
-      <p>The current theme is: {theme}</p>
-      <p>The resolvedTheme is: {resolvedTheme}</p>
-      <Button onClick={handleClickLight}>Light Mode</Button>
-      <Button onClick={handleClickSystem}>System Mode</Button>
-      <Button onClick={handleClickDark}>Dark Mode</Button>
-    </div>
+    <Button onClick={handleToDark}>
+      <MoonIcon width={32} height={32} />
+    </Button>
   );
 };
 
 const Button = styled("button", {
-  backgroundColor: "$blue4",
-  size: "150px",
-  color: "$blue11",
-  borderColor: "$blue7",
+  size: "60px",
+  display: "grid",
+  placeItems: "center",
+  borderRadius: "8px",
+  color: "$gray11",
+  backgroundColor: "$gray4",
+  borderColor: "$gray7",
   "&:hover": {
-    backgroundColor: "$blue5",
-    borderColor: "$blue8",
+    backgroundColor: "$gray5",
+    borderColor: "$gray8",
   },
 });
