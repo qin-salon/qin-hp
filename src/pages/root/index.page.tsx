@@ -9,9 +9,7 @@ const Root: CustomNextPage = () => {
   return (
     <div>
       <h2>Root</h2>
-      <button className="p-2" onClick={handleClick}>
-        Click me!
-      </button>
+      <button onClick={handleClick}>Click me!</button>
     </div>
   );
 };

@@ -6,7 +6,6 @@ exports[`Root page matches snapshot 1`] = `
     Root
   </h2>
   <button
-    className="p-2"
     onClick={[Function]}
   >
     Click me!
