@@ -1,14 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Root page matches snapshot 1`] = `
-<div>
-  <h2>
-    Root
-  </h2>
-  <button
-    onClick={[Function]}
-  >
-    Click me!
-  </button>
+<div
+  className="c-fcgcOt"
+>
+  <div>
+    <h2
+      className="c-iMvRoz"
+    >
+      ABOUT
+    </h2>
+    <p
+      className="c-cjhSLJ"
+    >
+      私達はテクノロジーを愛するコミュニティです。最高のプロダクトを創るために研鑽しています。 これが後に世界最大のテクノロジー集団になることは、私達以外まだ誰も知らない。
+    </p>
+  </div>
+  <div>
+    <h2
+      className="c-iMvRoz"
+    >
+      PRODUCT
+    </h2>
+    <p
+      className="c-cjhSLJ"
+    >
+      Coming Soon...
+    </p>
+  </div>
+  <div>
+    <h2
+      className="c-iMvRoz"
+    >
+      COMPANY
+    </h2>
+    <div
+      className="c-jNxTai"
+    >
+      <h3
+        className="c-gKjkTc"
+      >
+        合同会社Qin
+      </h3>
+      <dl>
+        <dt>
+          事業
+        </dt>
+        <dd>
+          インターネットビジネスの企画・開発・運営
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          設立
+        </dt>
+        <dd>
+          2021年7月
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          代表
+        </dt>
+        <dd>
+          島袋 光音
+        </dd>
+      </dl>
+    </div>
+  </div>
+  <div>
+    <h2
+      className="c-iMvRoz"
+    >
+      CONTACT
+    </h2>
+    <p
+      className="c-cjhSLJ"
+    >
+      <a
+        className="c-hrMtea"
+        href="https://twitter.com/shimabu_it"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        代表のTwitter
+      </a>
+       
+      宛にDMをお送りください
+    </p>
+  </div>
 </div>
 `;
