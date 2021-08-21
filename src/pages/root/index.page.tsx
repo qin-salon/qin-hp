@@ -23,10 +23,6 @@ const Root: CustomNextPage = () => {
         <Details>
           <H3>合同会社Qin</H3>
           <dl>
-            <dt>事業</dt>
-            <dd>インターネットビジネスの企画・開発・運営</dd>
-          </dl>
-          <dl>
             <dt>設立</dt>
             <dd>2021年7月</dd>
           </dl>
@@ -34,9 +30,13 @@ const Root: CustomNextPage = () => {
             <dt>代表</dt>
             <dd>島袋 光音</dd>
           </dl>
+          <dl>
+            <dt>事業</dt>
+            <dd>インターネットビジネスの企画・開発・運営</dd>
+          </dl>
           {/* <dl>
             <dt>住所</dt>
-            <dd>東京都豊島区南大塚2丁目11番10号ミモザビル3F</dd>
+            <dd>{process.env.NEXT_PUBLIC_ADDRESS}</dd>
           </dl> */}
         </Details>
       </div>
