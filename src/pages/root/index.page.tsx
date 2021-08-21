@@ -9,13 +9,13 @@ const Root: CustomNextPage = () => {
         <H2>ABOUT</H2>
         <Paragraph>
           私達はテクノロジーを愛するコミュニティです。最高のプロダクトを創るために研鑽しています。
-          これが後に世界最大のテクノロジー集団になることは、私達以外まだ誰も知らない。
+          Qinが後に世界最大のテクノロジー集団になると、このときはまだ誰も知る由もなかった...
         </Paragraph>
       </div>
 
       <div>
         <H2>PRODUCT</H2>
-        <Paragraph>Coming Soon...</Paragraph>
+        <Paragraph>Coming Soon</Paragraph>
       </div>
 
       <div>
