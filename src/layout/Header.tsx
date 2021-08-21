@@ -1,6 +1,6 @@
 import type { VFC } from "react";
 import { Qin } from "src/component/Icon";
-import { ThemeChanger } from "src/component/ThemeChanger";
+import { ColorChanger, ThemeChanger } from "src/component/Theme";
 import { styled } from "src/style";
 
 /**
@@ -12,9 +12,10 @@ export const Header: VFC = () => {
       <H1>
         <Qin />
       </H1>
-      <div>
+      <Buttons>
+        <ColorChanger />
         <ThemeChanger />
-      </div>
+      </Buttons>
     </Container>
   );
 };
@@ -22,9 +23,15 @@ export const Header: VFC = () => {
 const Container = styled("header", {
   display: "flex",
   justifyContent: "space-between",
-  paddingRight: "0.5rem",
+  gap: "2rem",
 });
 
 const H1 = styled("h1", {
-  width: "192px",
+  width: "100%",
+  maxWidth: "192px",
+});
+
+const Buttons = styled("div", {
+  display: "flex",
+  gap: "0.5rem",
 });

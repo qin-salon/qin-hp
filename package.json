@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.7",
+    "@radix-ui/react-accessible-icon": "^0.0.16",
     "@radix-ui/react-icons": "^1.0.3",
     "@stitches/react": "^0.2.5",
     "next": "11.1.0",
