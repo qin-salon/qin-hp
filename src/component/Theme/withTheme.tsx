@@ -1,5 +1,6 @@
 import type { CustomAppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider, useTheme } from "next-themes";
+import type { VFC } from "react";
 import { useEffect } from "react";
 import { dark } from "src/style/theme";
 
@@ -10,18 +11,24 @@ type AppPage = (props: CustomAppProps) => JSX.Element;
  */
 export const withTheme = (Component: AppPage) => {
   const WithTheme = (props: CustomAppProps) => {
-    useEffect(() => {
-      const theme = localStorage.getItem("theme");
-      const html = document.getElementsByTagName("html")[0];
-      html.setAttribute("class", theme ?? "");
-    }, []);
-
     return (
       <ThemeProvider attribute="class" value={{ light: "light", dark }}>
-        <Component {...props} />
+        <InitTheme>
+          <Component {...props} />
+        </InitTheme>
       </ThemeProvider>
     );
   };
 
   return WithTheme;
+};
+
+const InitTheme: VFC<{ children: JSX.Element }> = (props) => {
+  const { resolvedTheme } = useTheme();
+  useEffect(() => {
+    const html = document.getElementsByTagName("html")[0];
+    html.setAttribute("class", resolvedTheme ?? "");
+  }, [resolvedTheme]);
+
+  return props.children;
 };
