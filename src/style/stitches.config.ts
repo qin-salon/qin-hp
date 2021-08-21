@@ -73,7 +73,7 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
 });
 
 global({
-  html: { fontSize: "14px" },
+  html: { fontSize: "13px" },
   "@bp1": { html: { fontSize: "16px" } },
   body: { fontWeight: 800, lineHeight: 1.6, color: "$gray12", backgroundColor: "$gray2" },
 })();

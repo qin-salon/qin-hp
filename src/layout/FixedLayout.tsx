@@ -24,7 +24,8 @@ const Container = styled("div", {
   display: "grid",
   gap: "2rem",
   paddingY: "4rem",
-  paddingX: "1rem",
+  paddingLeft: "1.5rem",
+  paddingRight: "1rem",
   marginX: "auto",
   maxWidth: "768px",
 });
