@@ -1,9 +1,8 @@
-import { AccessibleIcon } from "@radix-ui/react-accessible-icon";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import type { VFC } from "react";
 import { useEffect, useState } from "react";
-import { styled } from "src/style";
+import { TooltipIcon } from "src/component/Tooltip";
 
 /**
  * @package
@@ -16,45 +15,18 @@ export const ThemeChanger: VFC = () => {
     return setIsMounted(true);
   }, []);
 
-  if (!isMounted) {
-    return null;
-  }
+  if (!isMounted) return null;
 
-  if (resolvedTheme === "dark") {
-    const handleToLight = () => {
-      setTheme("light");
-    };
-    return (
-      <Button onClick={handleToLight}>
-        <AccessibleIcon label="Set to light theme">
-          <SunIcon width={32} height={32} />
-        </AccessibleIcon>
-      </Button>
-    );
-  }
-
-  const handleToDark = () => {
-    setTheme("dark");
+  const oppositeColor = resolvedTheme === "dark" ? "light" : "dark";
+  const handleClick = () => {
+    setTheme(oppositeColor);
   };
+
   return (
-    <Button onClick={handleToDark}>
-      <AccessibleIcon label="Set to dark theme">
-        <MoonIcon width={32} height={32} />
-      </AccessibleIcon>
-    </Button>
+    <TooltipIcon
+      label={`Change to ${oppositeColor} theme`}
+      icon={resolvedTheme === "dark" ? <SunIcon /> : <MoonIcon />}
+      onClick={handleClick}
+    />
   );
 };
-
-const Button = styled("button", {
-  size: "60px",
-  display: "grid",
-  placeItems: "center",
-  borderRadius: "8px",
-  color: "$gray11",
-  backgroundColor: "$gray4",
-  borderColor: "$gray7",
-  "&:hover": {
-    backgroundColor: "$gray5",
-    borderColor: "$gray8",
-  },
-});

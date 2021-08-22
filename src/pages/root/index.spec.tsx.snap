@@ -13,7 +13,7 @@ exports[`Root page matches snapshot 1`] = `
     <p
       className="c-cjhSLJ"
     >
-      私達はテクノロジーを愛するコミュニティです。最高のプロダクトを創るために研鑽しています。 これが後に世界最大のテクノロジー集団になることは、私達以外まだ誰も知らない。
+      私達はテクノロジーを愛するコミュニティです。最高のプロダクトを創るために研鑽しています。 Qinが後に世界最大のテクノロジー集団になると、このときはまだ誰も知る由もなかった...
     </p>
   </div>
   <div>
@@ -25,7 +25,7 @@ exports[`Root page matches snapshot 1`] = `
     <p
       className="c-cjhSLJ"
     >
-      Coming Soon...
+      Coming Soon
     </p>
   </div>
   <div>
@@ -44,14 +44,6 @@ exports[`Root page matches snapshot 1`] = `
       </h3>
       <dl>
         <dt>
-          事業
-        </dt>
-        <dd>
-          インターネットビジネスの企画・開発・運営
-        </dd>
-      </dl>
-      <dl>
-        <dt>
           設立
         </dt>
         <dd>
@@ -64,6 +56,14 @@ exports[`Root page matches snapshot 1`] = `
         </dt>
         <dd>
           島袋 光音
+        </dd>
+      </dl>
+      <dl>
+        <dt>
+          事業
+        </dt>
+        <dd>
+          インターネットビジネスの企画・開発・運営
         </dd>
       </dl>
     </div>
@@ -79,9 +79,17 @@ exports[`Root page matches snapshot 1`] = `
     >
       <a
         className="c-hrMtea"
+        data-state="closed"
         href="https://twitter.com/shimabu_it"
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
         rel="noopener noreferrer"
         target="_blank"
+        type="button"
       >
         代表のTwitter
       </a>

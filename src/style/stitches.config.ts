@@ -1,5 +1,6 @@
 import {
   amber,
+  blackA,
   blue,
   bronze,
   brown,
@@ -68,6 +69,7 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
       ...tomato,
       ...violet,
       ...yellow,
+      ...blackA,
     },
   },
 });

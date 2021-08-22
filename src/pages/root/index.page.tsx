@@ -1,4 +1,5 @@
 import type { CustomNextPage } from "next";
+import { TooltipLink } from "src/component/Tooltip";
 import { FixedLayout } from "src/layout";
 import { styled } from "src/style";
 
@@ -44,9 +45,13 @@ const Root: CustomNextPage = () => {
       <div>
         <H2>CONTACT</H2>
         <Paragraph>
-          <Anchor href="https://twitter.com/shimabu_it" target="_blank" rel="noopener noreferrer">
-            代表のTwitter
-          </Anchor>{" "}
+          <TooltipLink
+            text="代表のTwitter"
+            label="@shimabu_it"
+            href="https://twitter.com/shimabu_it"
+            target="_blank"
+            rel="noopener noreferrer"
+          />{" "}
           宛にDMをお送りください
         </Paragraph>
       </div>
@@ -75,10 +80,6 @@ const Details = styled("div", {
   fontSize: "2rem",
   display: "grid",
   gap: "1rem",
-});
-
-const Anchor = styled("a", {
-  textDecoration: "underline",
 });
 
 Root.getLayout = FixedLayout;
