@@ -1,3 +1,4 @@
+import { IdProvider } from "@radix-ui/react-id";
 import type { CustomAppProps } from "next/app";
 import Head from "next/head";
 import { memo } from "react";
@@ -11,12 +12,12 @@ const App = (props: CustomAppProps) => {
     });
 
   return (
-    <>
+    <IdProvider>
       <Head>
         <title>nexst</title>
       </Head>
       {getLayout(<props.Component {...props.pageProps} />)}
-    </>
+    </IdProvider>
   );
 };
 
