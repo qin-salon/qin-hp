@@ -66,6 +66,12 @@ exports[`Root page matches snapshot 1`] = `
           インターネットビジネスの企画・開発・運営
         </dd>
       </dl>
+      <dl>
+        <dt>
+          住所
+        </dt>
+        <dd />
+      </dl>
     </div>
   </div>
   <div>

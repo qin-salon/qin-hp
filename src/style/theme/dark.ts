@@ -29,12 +29,12 @@ import {
   yellowDark,
 } from "@radix-ui/colors";
 
-import { theme } from "../stitches.config";
+import { createTheme } from "../stitches.config";
 
 /**
  * @package
  */
-export const dark = theme("dark", {
+export const dark = createTheme("dark", {
   colors: {
     ...amberDark,
     ...blueDark,

@@ -1,5 +1,4 @@
 import { MagicWandIcon } from "@radix-ui/react-icons";
-import type { ThemeToken } from "@stitches/react";
 import type { VFC } from "react";
 import { useCallback } from "react";
 import { TooltipIcon } from "src/component/Tooltip";
@@ -15,8 +14,12 @@ export const ColorChanger: VFC = () => {
   return <TooltipIcon label="Change text color" icon={<MagicWandIcon />} onClick={handleClick} />;
 };
 
+type Colors = typeof theme.colors;
+
+type Tokens = Colors[keyof Colors][];
+
 // get condidate color from stiches theme colors
-const getCondidateThemeTokens = (colors: typeof theme.colors): ThemeToken[] => {
+const getCondidateThemeTokens = (colors: Colors): Tokens => {
   const themeTokens = Object.values(colors).filter((color) => {
     return color.token.endsWith("11") && color.token !== "gray11" && color.token !== "blackA11";
   });
@@ -24,6 +27,6 @@ const getCondidateThemeTokens = (colors: typeof theme.colors): ThemeToken[] => {
 };
 
 // get random value from string array
-const getRandom = (arr: ThemeToken[]) => {
+const getRandom = (arr: Tokens) => {
   return arr[Math.floor(Math.random() * arr.length)];
 };

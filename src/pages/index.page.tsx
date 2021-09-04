@@ -13,12 +13,10 @@ const Root: CustomNextPage = () => {
           Qinが後に世界最大のテクノロジー集団になると、このときはまだ誰も知る由もなかった...
         </Paragraph>
       </div>
-
       <div>
         <H2>PRODUCT</H2>
         <Paragraph>Coming Soon</Paragraph>
       </div>
-
       <div>
         <H2>COMPANY</H2>
         <Details>
@@ -35,13 +33,12 @@ const Root: CustomNextPage = () => {
             <dt>事業</dt>
             <dd>インターネットビジネスの企画・開発・運営</dd>
           </dl>
-          {/* <dl>
+          <dl>
             <dt>住所</dt>
             <dd>{process.env.NEXT_PUBLIC_ADDRESS}</dd>
-          </dl> */}
+          </dl>
         </Details>
       </div>
-
       <div>
         <H2>CONTACT</H2>
         <Paragraph>

@@ -1,1 +1,1 @@
-export { css, getCssString, global, keyframes, styled, theme } from "./stitches.config";
+export { css, getCssText, globalCss, keyframes, styled, theme } from "./stitches.config";

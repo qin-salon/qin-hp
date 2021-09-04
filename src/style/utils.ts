@@ -1,34 +1,30 @@
-import type { CSSPropertiesToTokenScale, IConfig, TMedias, TTheme } from "@stitches/react";
+// import type { CSSPropertiesToTokenScale, IConfig, TMedias, TTheme } from "@stitches/react";
+
+import type Stitches from "@stitches/react/types/stitches";
 
 /**
  * @package
  */
-export const utils: IConfig<TMedias, TTheme, { [x: string]: any }, "", CSSPropertiesToTokenScale>["utils"] = {
+export const utils: Stitches["config"]["utils"] = {
   // Abbreviated margin properties
-  marginX: (_config) => {
-    return (value) => {
-      return {
-        marginLeft: value,
-        marginRight: value,
-      };
+  marginX: (value) => {
+    return {
+      marginLeft: value,
+      marginRight: value,
     };
   },
-  paddingY: (_config) => {
-    return (value) => {
-      return {
-        paddingTop: value,
-        paddingBottom: value,
-      };
+  paddingY: (value) => {
+    return {
+      paddingTop: value,
+      paddingBottom: value,
     };
   },
 
   // A property for applying width/height together
-  size: (_config) => {
-    return (value) => {
-      return {
-        width: value,
-        height: value,
-      };
+  size: (value) => {
+    return {
+      width: value,
+      height: value,
     };
   },
 };

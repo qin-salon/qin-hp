@@ -29,16 +29,27 @@ import {
   violet,
   yellow,
 } from "@radix-ui/colors";
-import { createCss } from "@stitches/react";
-
-import { utils } from "./utils";
+import { createStitches } from "@stitches/react";
+import type { CSS } from "@stitches/react/types/css-util";
 
 /**
  * @package
  */
-export const { styled, css, global, keyframes, getCssString, theme } = createCss({
-  utils,
-  media: { bp1: "(min-width: 640px)" },
+export const { styled, css, globalCss, keyframes, getCssText, createTheme, theme } = createStitches({
+  media: {
+    bp1: "(min-width: 640px)",
+  },
+  utils: {
+    marginX: (value: CSS[keyof CSS]) => {
+      return { marginLeft: value, marginRight: value };
+    },
+    paddingY: (value: CSS[keyof CSS]) => {
+      return { paddingTop: value, paddingBottom: value };
+    },
+    size: (value: CSS[keyof CSS]) => {
+      return { width: value, height: value };
+    },
+  },
   theme: {
     colors: {
       ...amber,
@@ -74,7 +85,7 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
   },
 });
 
-global({
+globalCss({
   html: { fontSize: "13px" },
   "@bp1": { html: { fontSize: "16px" } },
   body: { fontWeight: 800, lineHeight: 1.6, color: "$gray12", backgroundColor: "$gray2" },
