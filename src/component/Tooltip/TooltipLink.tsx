@@ -16,12 +16,13 @@ export const TooltipLink: VFC<TooltipLinkProps> = (props) => {
   const { label, text, ...rest } = props;
 
   return (
-    <TooltipBase label={label} as={Anchor} {...rest}>
-      {text}
+    <TooltipBase label={label} tooltipTriggerProps={{ asChild: true }}>
+      <Anchor {...rest}>{text}</Anchor>
     </TooltipBase>
   );
 };
 
 const Anchor = styled("a", {
+  color: "inherit",
   textDecoration: "underline",
 });

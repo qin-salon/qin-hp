@@ -16,11 +16,13 @@ type TooltipIconProps = {
  */
 export const TooltipIcon: VFC<TooltipIconProps> = (props) => {
   // eslint-disable-next-line react/destructuring-assignment
-  const { label, icon, ...rest } = props;
+  const { label, icon, onClick: handleClick, ...rest } = props;
 
   return (
-    <TooltipBase label={label} as={Button} {...rest}>
-      <AccessibleIcon label={label}>{cloneElement(icon, { width: 32, height: 32 })}</AccessibleIcon>
+    <TooltipBase label={label} tooltipTriggerProps={{ asChild: true }} {...rest}>
+      <Button onClick={handleClick}>
+        <AccessibleIcon label={label}>{cloneElement(icon, { width: 32, height: 32 })}</AccessibleIcon>
+      </Button>
     </TooltipBase>
   );
 };

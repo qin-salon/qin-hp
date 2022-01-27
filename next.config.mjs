@@ -1,14 +1,12 @@
-// @ts-check
-
 /**
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
   future: { strictPostcssConfiguration: true },
-  pageExtensions: ["page.tsx", "page.ts"],
   reactStrictMode: true,
-  typescript: { ignoreBuildErrors: true },
   poweredByHeader: false,
+  swcMinify: true,
+  // experimental: { concurrentFeatures: true, serverComponents: true },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

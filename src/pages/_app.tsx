@@ -1,10 +1,9 @@
-import { IdProvider } from "@radix-ui/react-id";
-import type { CustomAppProps } from "next/app";
+import type { CustomAppPage } from "next/app";
 import Head from "next/head";
 import { memo } from "react";
 import { withTheme } from "src/component/Theme";
 
-const App = (props: CustomAppProps) => {
+const App: CustomAppPage = (props) => {
   const getLayout =
     props.Component.getLayout ||
     ((page) => {
@@ -12,12 +11,12 @@ const App = (props: CustomAppProps) => {
     });
 
   return (
-    <IdProvider>
+    <>
       <Head>
-        <title>nexst</title>
+        <title>Qin</title>
       </Head>
       {getLayout(<props.Component {...props.pageProps} />)}
-    </IdProvider>
+    </>
   );
 };
 

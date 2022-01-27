@@ -29,6 +29,7 @@ const Container = styled("header", {
 const H1 = styled("h1", {
   width: "100%",
   maxWidth: "192px",
+  margin: 0,
 });
 
 const Buttons = styled("div", {

@@ -21,22 +21,22 @@ const Root: CustomNextPage = () => {
         <H2>COMPANY</H2>
         <Details>
           <H3>合同会社Qin</H3>
-          <dl>
+          <Dl>
             <dt>設立</dt>
-            <dd>2021年7月</dd>
-          </dl>
-          <dl>
+            <Dd>2021年7月</Dd>
+          </Dl>
+          <Dl>
             <dt>代表</dt>
-            <dd>島袋 光音</dd>
-          </dl>
-          <dl>
+            <Dd>島袋 光音</Dd>
+          </Dl>
+          <Dl>
             <dt>事業</dt>
-            <dd>インターネットビジネスの企画・開発・運営</dd>
-          </dl>
-          <dl>
+            <Dd>インターネットビジネスの企画・開発・運営</Dd>
+          </Dl>
+          <Dl>
             <dt>住所</dt>
-            <dd>{process.env.NEXT_PUBLIC_ADDRESS}</dd>
-          </dl>
+            <Dd>{process.env.NEXT_PUBLIC_ADDRESS}</Dd>
+          </Dl>
         </Details>
       </div>
       <div>
@@ -63,20 +63,31 @@ const Container = styled("div", {
 
 const H2 = styled("h2", {
   fontSize: "4rem",
+  marginBottom: 0,
 });
 
 const H3 = styled("h3", {
   fontSize: "3rem",
+  margin: 0,
 });
 
 const Paragraph = styled("p", {
   fontSize: "2rem",
+  margin: 0,
 });
 
 const Details = styled("div", {
   fontSize: "2rem",
   display: "grid",
   gap: "1rem",
+});
+
+const Dl = styled("dl", {
+  marginBottom: 0,
+});
+
+const Dd = styled("dd", {
+  margin: 0,
 });
 
 Root.getLayout = FixedLayout;

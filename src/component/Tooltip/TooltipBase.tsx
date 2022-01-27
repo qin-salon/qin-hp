@@ -1,12 +1,12 @@
+import type { TooltipTriggerProps } from "@radix-ui/react-tooltip";
 import { Tooltip, TooltipArrow, TooltipContent, TooltipTrigger } from "@radix-ui/react-tooltip";
-import type { StitchesComponentWithAutoCompleteForJSXElements } from "@stitches/react";
 import type { ReactNode, VFC } from "react";
 import { keyframes, styled } from "src/style";
 
 type TooltipBaseProps = {
   label: string;
   children: ReactNode;
-  as: StitchesComponentWithAutoCompleteForJSXElements<"a" | "button">;
+  tooltipTriggerProps?: TooltipTriggerProps;
 };
 
 /**
@@ -14,11 +14,11 @@ type TooltipBaseProps = {
  */
 export const TooltipBase: VFC<TooltipBaseProps> = (props) => {
   // eslint-disable-next-line react/destructuring-assignment
-  const { label, children, ...rest } = props;
+  const { label, children, tooltipTriggerProps } = props;
 
   return (
     <Tooltip delayDuration={200}>
-      <TooltipTrigger {...rest}>{children}</TooltipTrigger>
+      <TooltipTrigger {...tooltipTriggerProps}>{children}</TooltipTrigger>
       <StyledContent sideOffset={5}>
         {label}
         <StyledArrow offset={25} />

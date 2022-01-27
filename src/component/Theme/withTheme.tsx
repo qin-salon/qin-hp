@@ -1,16 +1,14 @@
-import type { CustomAppProps } from "next/app";
+import type { CustomAppPage } from "next/app";
 import { ThemeProvider, useTheme } from "next-themes";
 import type { VFC } from "react";
 import { useEffect } from "react";
 import { dark } from "src/style/theme";
 
-type AppPage = (props: CustomAppProps) => JSX.Element;
-
 /**
  * @package
  */
-export const withTheme = (Component: AppPage) => {
-  const WithTheme = (props: CustomAppProps) => {
+export const withTheme = (Component: CustomAppPage) => {
+  const WithTheme: CustomAppPage = (props) => {
     return (
       <ThemeProvider attribute="class" value={{ light: "light", dark }}>
         <InitTheme>

@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   parser: "@typescript-eslint/parser",
   parserOptions: { project: "./tsconfig.json" },
   plugins: ["simple-import-sort", "import-access"],
@@ -62,7 +63,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["src/pages/**/*.page.tsx", "src/pages/api/**/*.page.ts"],
+      files: ["src/pages/**/*.tsx", "src/pages/api/**/*.ts"],
       rules: {
         "import/no-default-export": "off",
         "@typescript-eslint/naming-convention": [
