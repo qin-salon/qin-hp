@@ -1,12 +1,11 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: { project: "./tsconfig.json" },
-  plugins: ["simple-import-sort", "import-access", "cypress"],
+  plugins: ["simple-import-sort", "import-access"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:cypress/recommended",
     "next/core-web-vitals",
     "prettier",
   ],
